@@ -1,0 +1,81 @@
+{
+  "name": "Locale Variants Manager",
+  "description": "Manage multilingual content using variant groups and fallback logic",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "email": "your.email@example.com",
+  "website": "https://your-website.com",
+  "logo": "https://your-website.com/logo.png",
+  "categories": ["translation", "content-management", "multilingual"],
+  "tags": ["variants", "translations", "fallback", "multilingual", "locale"],
+  "type": "app",
+  "framework": "react",
+  "ui_location": {
+    "entry_sidebar": {
+      "url": "/entry-sidebar",
+      "label": "Locale Variants",
+      "icon": "🌐"
+    },
+    "dashboard": {
+      "url": "/dashboard",
+      "label": "Variant Manager",
+      "icon": "⚙️"
+    }
+  },
+  "oauth": {
+    "redirect_uri": "https://your-app-domain.com/oauth/callback",
+    "scopes": [
+      "content_management",
+      "personalize_management",
+      "stack_management"
+    ]
+  },
+  "webhook": {
+    "url": "https://your-app-domain.com/webhook",
+    "events": [
+      "entry.publish",
+      "entry.unpublish",
+      "entry.delete"
+    ]
+  },
+  "config": {
+    "stack_api_key": {
+      "type": "text",
+      "label": "Stack API Key",
+      "required": true,
+      "description": "Your Contentstack stack API key"
+    },
+    "management_token": {
+      "type": "text",
+      "label": "Management Token",
+      "required": true,
+      "description": "Management token with appropriate permissions"
+    },
+    "personalize_api_key": {
+      "type": "text",
+      "label": "Personalize API Key",
+      "required": true,
+      "description": "Personalize API key for variant management"
+    },
+    "translation_api_key": {
+      "type": "text",
+      "label": "Translation API Key",
+      "required": false,
+      "description": "API key for AI translation services (optional)"
+    }
+  },
+  "permissions": {
+    "content_types": ["read", "write"],
+    "entries": ["read", "write", "publish"],
+    "assets": ["read", "write"],
+    "locales": ["read", "write"],
+    "personalize": ["read", "write"]
+  },
+  "screenshots": [
+    "https://your-website.com/screenshot1.png",
+    "https://your-website.com/screenshot2.png",
+    "https://your-website.com/screenshot3.png"
+  ],
+  "documentation": "https://your-website.com/docs",
+  "support": "https://your-website.com/support"
+}
